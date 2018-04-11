@@ -18,6 +18,7 @@ import LinodeTheme from 'src/theme';
 
 import isPathOneOf from 'src/utilities/routing/isPathOneOf';
 import logoPng from 'src/assets/logo/logo.png';
+import { LinodeLogoImgSrc } from '~/assets';
 import ShowMoreExpansion from 'src/components/ShowMoreExpansion';
 
 type PrimaryLink = {
@@ -193,7 +194,9 @@ class PrimaryNav extends React.Component<Props> {
         >
           <Grid item>
             <div className={classes.logoItem}>
-              <img width="115" height="43" src={logoPng} />
+              <object data={LinodeLogoImgSrc} width="115" height="43" type="image/svg+xml" />
+                <img width="115" height="43" src={logoPng} />
+              </object>
             </div>
           </Grid>
         </Grid>
